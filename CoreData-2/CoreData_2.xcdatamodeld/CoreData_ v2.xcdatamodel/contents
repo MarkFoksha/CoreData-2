@@ -5,7 +5,8 @@
         <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="book" inverseEntity="User"/>
     </entity>
     <entity name="User" representedClassName="User" syncable="YES">
-        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="avatar" optional="YES" attributeType="Transformable" valueTransformerName=" " customClassName="UIImage"/>
+        <attribute name="firstName" optional="YES" attributeType="String"/>
         <relationship name="book" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Book" inverseName="owner" inverseEntity="Book"/>
     </entity>
 </model>
